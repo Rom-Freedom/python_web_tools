@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'basicPythonTools/css/index.css' %}">
+{% endblock %}
+
+
+{% block title %}
+    Меню
+{% endblock %}
+
+
+{% block content %}
+    <h1>Базовые инструменты Python</h1>
+    <ul>
+        {% for tool in tools %}
+            <li><a href="{% url 'python_tools' web_tool=tool %}">{{ tool|title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
+
+

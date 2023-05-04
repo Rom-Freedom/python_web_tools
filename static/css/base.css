@@ -1,0 +1,33 @@
+
+
+html {
+    background-color: turquoise;
+}
+
+nav {
+    text-align: center;
+    color: white:
+    font-size: 2rem;
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 50px;
+}
+
+nav a {
+    color: white;
+    display: block;
+    font-size: 1.5rem;
+    margin: 15px;
+}
+
+}
+
+nav a:hover, ul a:active {
+    color: #eca8b5;
+}

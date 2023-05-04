@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% load my_filter %}
+
+{% block css_additional %}
+    <link rel="stylesheet" href="{% static 'basicPythonTools/css/info.css' %}">
+{% endblock %}
+
+{% block title %}
+    Python {{ tool|upper }}
+{% endblock %}
+
+{% block content %}
+    {% include 'includes/navbar.html' %}
+    <h1>{{ description|split|first }}</h1>
+    {% if description_tool is None %}
+        <h2>Incorrect web tool - {{ tool }}</h2>
+    {% else %}
+        <h2>{{ description_tool|capfirst }}</h2>
+    {% endif %}
+{% endblock %}
